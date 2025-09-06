@@ -1,0 +1,103 @@
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+    }
+    
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(pzd.jpg) 
+    }
+   
+    /* Hlavička */
+    header {
+        background-color: rgb(49, 49, 49);   
+        color: rgb(0, 0, 0);
+        padding: 15px 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        font-family: 'Playfair Display', serif; /* fancy font */
+      }
+      
+      header a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 20px; /* trochu väčšie */
+      }
+      
+      header a:hover {
+        text-decoration: underline;
+      }
+    
+    /* Centrálne pole */
+    .container {
+    max-width: 1000px;
+    margin: 100px auto 50px; /* aby nešlo pod header */
+    background: rgb(49, 49, 49);
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 80vh;
+    
+    }
+    
+    /* Sekcie */
+    section {
+    margin-bottom: 80px;
+    }
+    
+    h1 {
+    text-align: center;
+   
+    }
+    
+    /* Ponuka - mriežka produktov */
+   
+    
+    
+      
+      /* Zakáž wrapovanie pri menších obrazovkách */
+      @media (max-width: 1024px) {
+        .products {
+          grid-template-columns: repeat(3, 1fr); 
+          overflow-x: auto; /* pridá horizontálne posúvanie */
+        }
+      }
+    .product:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgb(247, 255, 0);
+        background: #ffffff; /* jemne bielšie pozadie pri hoveri */
+      }
+    .product {
+    background: #c4c1c1;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    }
+    
+    .product img {
+    width: 100%;
+    border-radius: 10px;
+    }
+    
+    .product p {
+    margin: 10px 0;
+    }
+    
+    .product .price {
+    font-weight: bold;
+    color: darkred;
+    }
+    
+    /* Kontakt + O nás box */
+    .info-box {
+    background: #c4c1c1;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* fancy font */
+    }
+    
